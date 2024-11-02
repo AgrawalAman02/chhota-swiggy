@@ -1,3 +1,6 @@
+import React from "react";
+import ReactDOM from "react-dom/client";
+
 // const heading = React.createElement("h1",{},"Hello From the React!");    // {} in curly brace we give attributes
 const heading = React.createElement(
     "h1",
@@ -9,27 +12,13 @@ const heading = React.createElement(
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 // root.render(heading);
-
-
-/* 
-if we want to create a nested html element then let see how can we do that]
-
-<div class="parent">
-    <div class="child">
-        <h1>Hii from nested element </h1>
-        <h2>Hii from nested element </h2>
-    </div>
-</div>
-
-*/
-
 const parent = React.createElement(
     "div",
     {id:"parent"},
     React.createElement(
         "div",
         {id:"child"},
-        [React.createElement("h1", {}, "Hii from the nested h1"), React.createElement("h2", {}, "Hii from the nested h2")]
+        [React.createElement("h1", {}, "Hii from the nested h1 . How are u?"), React.createElement("h2", {}, "Hii from the nested h2. Lets do some coding!")]
     )
 );
 

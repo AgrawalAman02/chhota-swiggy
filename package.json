@@ -1,0 +1,24 @@
+{
+  "name": "hello-react",
+  "version": "1.0.0",
+  "description": "Here I am learning about react",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "react"
+  ],
+  "author": "Aman Agrawal",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.12.0",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "browserslist": [
+    "last 2 versionsy"
+  ]
+}
