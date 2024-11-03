@@ -2,3 +2,4 @@
 package-lock.json
 /dist
 /.parcel-cache
+/theory.js

@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Here I am learning about react",
   "scripts": {
+    "start" : "parcel learning/index.html",
     "test": "jest"
   },
   "keywords": [
