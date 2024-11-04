@@ -514,6 +514,482 @@ const resList = [
     },
 
     {
+      "card": {
+        "card": {
+          "@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
+          "info": {
+            "id": "795496",
+            "name": "Chai Break",
+            "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2024/4/22/7914345d-7a3c-4714-961a-6ec660ee122f_795496.jpg",
+            "locality": "South Kolkata",
+            "areaName": "Dover Road",
+            "costForTwo": "₹500 for two",
+            "cuisines": [
+              "Pizza",
+              "North Indian",
+              "Italian",
+              "Chinese",
+              "Beverages",
+              "Tea",
+              "Cafe"
+            ],
+            "avgRating": 4.6,
+            "veg": true,
+            "parentId": "234",
+            "avgRatingString": "4.6",
+            "totalRatingsString": "580",
+            "promoted": true,
+            "adTrackingId": "cid=20663312~p=0~adgrpid=20663312#ag1~mp=SWIGGY_IN~bl=FOOD~aet=RESTAURANT~aeid=795496~eid=9cd563d5-2ba6-48a5-a411-9b878ec1131b~srvts=1730747268239~collid=83637",
+            "sla": {
+              "deliveryTime": 32,
+              "lastMileTravel": 3.7,
+              "serviceability": "SERVICEABLE",
+              "slaString": "30-35 mins",
+              "lastMileTravelString": "3.7 km",
+              "iconType": "ICON_TYPE_EMPTY"
+            },
+            "availability": {
+              "nextCloseTime": "2024-11-05 01:00:00",
+              "opened": true
+            },
+            "badges": {
+              "imageBadges": [
+                {
+                  "imageId": "Rxawards/_CATEGORY-Cafe%20&%20Chai.png",
+                  "description": "Delivery!"
+                }
+              ]
+            },
+            "isOpen": true,
+            "type": "F",
+            "badgesV2": {
+              "entityBadges": {
+                "textBased": {
+                  
+                },
+                "imageBased": {
+                  "badgeObject": [
+                    {
+                      "attributes": {
+                        "description": "Delivery!",
+                        "imageId": "Rxawards/_CATEGORY-Cafe%20&%20Chai.png"
+                      }
+                    }
+                  ]
+                },
+                "textExtendedBadges": {
+                  
+                }
+              }
+            },
+            "aggregatedDiscountInfoV3": {
+              "header": "₹125 OFF",
+              "subHeader": "ABOVE ₹249",
+              "discountTag": "FLAT DEAL"
+            },
+            "orderabilityCommunication": {
+              "title": {
+                
+              },
+              "subTitle": {
+                
+              },
+              "message": {
+                
+              },
+              "customIcon": {
+                
+              }
+            },
+            "differentiatedUi": {
+              "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+              "differentiatedUiMediaDetails": {
+                "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+                "lottie": {
+                  
+                },
+                "video": {
+                  
+                }
+              }
+            },
+            "reviewsSummary": {
+              
+            },
+            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            "restaurantOfferPresentationInfo": {
+              
+            },
+            "externalRatings": {
+              "aggregatedRating": {
+                "rating": "--"
+              }
+            },
+            "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
+            "campaignId": "20663312"
+          },
+          "analytics": {
+            
+          },
+          "cta": {
+            "link": "swiggy://menu?restaurant_id=795496&source=collection&query=Burger",
+            "text": "RESTAURANT_MENU",
+            "type": "DEEPLINK"
+          },
+          "widgetId": "collectionV5RestaurantListWidget_SimRestoRelevance_food"
+        },
+        "relevance": {
+          "type": "RELEVANCE_TYPE_ON_MENU_RETURN",
+          "sectionId": "MENU_RETURN_FOOD"
+        }
+      }
+    },
+    {
+      "card": {
+        "card": {
+          "@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
+          "info": {
+            "id": "737986",
+            "name": "Burger Singh (Big Punjabi Burgers)",
+            "cloudinaryImageId": "972a37599772cdc7df93a0855ad87591",
+            "locality": "sahid nagar",
+            "areaName": "Santoshpur",
+            "costForTwo": "₹300 for two",
+            "cuisines": [
+              "Burgers"
+            ],
+            "avgRating": 4.4,
+            "parentId": "375065",
+            "avgRatingString": "4.4",
+            "totalRatingsString": "3.7K+",
+            "sla": {
+              "deliveryTime": 27,
+              "lastMileTravel": 3,
+              "serviceability": "SERVICEABLE",
+              "slaString": "25-30 mins",
+              "lastMileTravelString": "3.0 km",
+              "iconType": "ICON_TYPE_EMPTY"
+            },
+            "availability": {
+              "nextCloseTime": "2024-11-05 04:00:00",
+              "opened": true
+            },
+            "badges": {
+              
+            },
+            "isOpen": true,
+            "type": "F",
+            "badgesV2": {
+              "entityBadges": {
+                "textBased": {
+                  
+                },
+                "imageBased": {
+                  
+                },
+                "textExtendedBadges": {
+                  
+                }
+              }
+            },
+            "aggregatedDiscountInfoV3": {
+              "header": "50% OFF",
+              "subHeader": "UPTO ₹100"
+            },
+            "orderabilityCommunication": {
+              "title": {
+                
+              },
+              "subTitle": {
+                
+              },
+              "message": {
+                
+              },
+              "customIcon": {
+                
+              }
+            },
+            "differentiatedUi": {
+              "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+              "differentiatedUiMediaDetails": {
+                "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+                "lottie": {
+                  
+                },
+                "video": {
+                  
+                }
+              }
+            },
+            "reviewsSummary": {
+              
+            },
+            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            "restaurantOfferPresentationInfo": {
+              
+            },
+            "externalRatings": {
+              "aggregatedRating": {
+                "rating": "--"
+              }
+            },
+            "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
+          },
+          "analytics": {
+            
+          },
+          "cta": {
+            "link": "swiggy://menu?restaurant_id=737986&source=collection&query=Burger",
+            "text": "RESTAURANT_MENU",
+            "type": "DEEPLINK"
+          },
+          "widgetId": "collectionV5RestaurantListWidget_SimRestoRelevance_food"
+        },
+        "relevance": {
+          "type": "RELEVANCE_TYPE_ON_MENU_RETURN",
+          "sectionId": "MENU_RETURN_FOOD"
+        }
+      }
+    },
+    {
+      "card": {
+        "card": {
+          "@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
+          "info": {
+            "id": "953091",
+            "name": "Griddle's - Burgers,Rolls & Bowls",
+            "cloudinaryImageId": "FOOD_CATALOG/IMAGES/CMS/2024/3/12/4272b9d7-0114-4920-a0fb-58b95591799c_b6b2d95b-531c-4e0c-a47d-2a3b9737a392.jpg_compressed",
+            "locality": "Ruby Area",
+            "areaName": "Ruby Area",
+            "costForTwo": "₹350 for two",
+            "cuisines": [
+              "Burgers"
+            ],
+            "avgRating": 4.3,
+            "parentId": "90543",
+            "avgRatingString": "4.3",
+            "totalRatingsString": "42",
+            "promoted": true,
+            "adTrackingId": "cid=20663570~p=1~adgrpid=20663570#ag1~mp=SWIGGY_IN~bl=FOOD~aet=RESTAURANT~aeid=953091~eid=051e6027-167f-410d-b651-2574c9efaa8f~srvts=1730747268239~collid=83637",
+            "sla": {
+              "deliveryTime": 27,
+              "lastMileTravel": 3.6,
+              "serviceability": "SERVICEABLE",
+              "slaString": "25-30 mins",
+              "lastMileTravelString": "3.6 km",
+              "iconType": "ICON_TYPE_EMPTY"
+            },
+            "availability": {
+              "nextCloseTime": "2024-11-05 04:30:00",
+              "opened": true
+            },
+            "badges": {
+              
+            },
+            "isOpen": true,
+            "type": "F",
+            "badgesV2": {
+              "entityBadges": {
+                "imageBased": {
+                  
+                },
+                "textExtendedBadges": {
+                  
+                },
+                "textBased": {
+                  
+                }
+              }
+            },
+            "aggregatedDiscountInfoV3": {
+              "header": "60% OFF",
+              "subHeader": "UPTO ₹120"
+            },
+            "orderabilityCommunication": {
+              "title": {
+                
+              },
+              "subTitle": {
+                
+              },
+              "message": {
+                
+              },
+              "customIcon": {
+                
+              }
+            },
+            "differentiatedUi": {
+              "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+              "differentiatedUiMediaDetails": {
+                "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+                "lottie": {
+                  
+                },
+                "video": {
+                  
+                }
+              }
+            },
+            "reviewsSummary": {
+              
+            },
+            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            "isNewlyOnboarded": true,
+            "restaurantOfferPresentationInfo": {
+              
+            },
+            "externalRatings": {
+              "aggregatedRating": {
+                "rating": "--"
+              }
+            },
+            "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
+            "campaignId": "20663570"
+          },
+          "analytics": {
+            
+          },
+          "cta": {
+            "link": "swiggy://menu?restaurant_id=953091&source=collection&query=Burger",
+            "text": "RESTAURANT_MENU",
+            "type": "DEEPLINK"
+          },
+          "widgetId": "collectionV5RestaurantListWidget_SimRestoRelevance_food"
+        },
+        "relevance": {
+          "type": "RELEVANCE_TYPE_ON_MENU_RETURN",
+          "sectionId": "MENU_RETURN_FOOD"
+        }
+      }
+    },
+    {
+      "card": {
+        "card": {
+          "@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
+          "info": {
+            "id": "194159",
+            "name": "Burger King",
+            "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2024/6/11/4c140390-e252-47b2-a5aa-6d199918bb10_194159.JPG",
+            "locality": "Rashbehari Avenue",
+            "areaName": "Rashbehari Avenue",
+            "costForTwo": "₹350 for two",
+            "cuisines": [
+              "Burgers",
+              "American"
+            ],
+            "avgRating": 4.5,
+            "parentId": "166",
+            "avgRatingString": "4.5",
+            "totalRatingsString": "28K+",
+            "sla": {
+              "deliveryTime": 39,
+              "lastMileTravel": 3.7,
+              "serviceability": "SERVICEABLE",
+              "slaString": "35-40 mins",
+              "lastMileTravelString": "3.7 km",
+              "iconType": "ICON_TYPE_EMPTY"
+            },
+            "availability": {
+              "nextCloseTime": "2024-11-05 02:00:00",
+              "opened": true
+            },
+            "badges": {
+              "imageBadges": [
+                {
+                  "imageId": "Rxawards/_CATEGORY-Burger.png",
+                  "description": "Delivery!"
+                }
+              ]
+            },
+            "isOpen": true,
+            "type": "F",
+            "badgesV2": {
+              "entityBadges": {
+                "textBased": {
+                  
+                },
+                "imageBased": {
+                  "badgeObject": [
+                    {
+                      "attributes": {
+                        "imageId": "Rxawards/_CATEGORY-Burger.png",
+                        "description": "Delivery!"
+                      }
+                    }
+                  ]
+                },
+                "textExtendedBadges": {
+                  
+                }
+              }
+            },
+            "aggregatedDiscountInfoV3": {
+              "header": "ITEMS",
+              "subHeader": "AT ₹99"
+            },
+            "orderabilityCommunication": {
+              "title": {
+                
+              },
+              "subTitle": {
+                
+              },
+              "message": {
+                
+              },
+              "customIcon": {
+                
+              }
+            },
+            "differentiatedUi": {
+              "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+              "differentiatedUiMediaDetails": {
+                "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+                "lottie": {
+                  
+                },
+                "video": {
+                  
+                }
+              }
+            },
+            "reviewsSummary": {
+              
+            },
+            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            "restaurantOfferPresentationInfo": {
+              
+            },
+            "externalRatings": {
+              "aggregatedRating": {
+                "rating": "4.7",
+                "ratingCount": "1.2K+"
+              },
+              "source": "GOOGLE",
+              "sourceIconImageId": "v1704440323/google_ratings/rating_google_tag"
+            },
+            "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
+          },
+          "analytics": {
+            
+          },
+          "cta": {
+            "link": "swiggy://menu?restaurant_id=194159&source=collection&query=Burger",
+            "text": "RESTAURANT_MENU",
+            "type": "DEEPLINK"
+          },
+          "widgetId": "collectionV5RestaurantListWidget_SimRestoRelevance_food"
+        },
+        "relevance": {
+          "type": "RELEVANCE_TYPE_ON_MENU_RETURN",
+          "sectionId": "MENU_RETURN_FOOD"
+        }
+      }
+    },
+
+    {
         "card": {
           "card": {
             "@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",

@@ -19,6 +19,13 @@ const Body=()=>{
                 }}
                 >Top Rated Restaurants</button>
 
+                <button
+                className="clear-filter"
+                onClick={()=>{
+                    setListOfRetaurants(resList);
+                }}
+                >&#10060;</button>
+
             </div>
             <div className="res-container">
 
