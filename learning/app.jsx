@@ -66,6 +66,109 @@ const RestaurantCards = (props)=>{
     )
 };
 
+const resData = {
+    "@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
+    "info": {
+      "id": "15267",
+      "name": "Kasturi Restaurant",
+      "cloudinaryImageId": "qhq7lcgv502nymy0znwo",
+      "locality": "Ruby Area",
+      "areaName": "South Kolkata",
+      "costForTwo": "₹400 for two",
+      "cuisines": [
+        "Bengali",
+        "Seafood"
+      ],
+      "avgRating": 4.4,
+      "parentId": "2046",
+      "avgRatingString": "4.4",
+      "totalRatingsString": "35K+",
+      "promoted": true,
+      "adTrackingId": "cid=20729294~p=0~adgrpid=20729294#ag1~mp=SWIGGY_IN~bl=FOOD~aet=RESTAURANT~aeid=15267~eid=ad0ef53d-1440-4434-bcef-0fa6c2c4976c~srvts=1730710382857~collid=83633",
+      "sla": {
+        "deliveryTime": 37,
+        "lastMileTravel": 2,
+        "serviceability": "SERVICEABLE",
+        "slaString": "35-40 mins",
+        "lastMileTravelString": "2.0 km",
+        "iconType": "ICON_TYPE_EMPTY"
+      },
+      "availability": {
+        "nextCloseTime": "2024-11-04 23:00:00",
+        "opened": true
+      },
+      "badges": {
+        "imageBadges": [
+          {
+            "imageId": "Rxawards/_CATEGORY-Bengali.png",
+            "description": "Delivery!"
+          }
+        ]
+      },
+      "isOpen": true,
+      "type": "F",
+      "badgesV2": {
+        "entityBadges": {
+          "textBased": {},
+          "imageBased": {
+            "badgeObject": [
+              {
+                "attributes": {
+                  "imageId": "Rxawards/_CATEGORY-Bengali.png",
+                  "description": "Delivery!"
+                }
+              }
+            ]
+          },
+          "textExtendedBadges": {}
+        }
+      },
+      "aggregatedDiscountInfoV3": {
+        "header": "40% OFF",
+        "subHeader": "UPTO ₹80"
+      },
+      "orderabilityCommunication": {
+        "title": {},
+        "subTitle": {},
+        "message": {},
+        "customIcon": {}
+      },
+      "differentiatedUi": {
+        "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+        "differentiatedUiMediaDetails": {
+          "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+          "lottie": {},
+          "video": {}
+        }
+      },
+      "reviewsSummary": {},
+      "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+      "restaurantOfferPresentationInfo": {},
+      "externalRatings": {
+        "aggregatedRating": {
+          "rating": "4.1",
+          "ratingCount": "147"
+        },
+        "source": "GOOGLE",
+        "sourceIconImageId": "v1704440323/google_ratings/rating_google_tag"
+      },
+      "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
+      "campaignId": "20729294"
+    },
+    "analytics": {},
+    "cta": {
+      "link": "swiggy://menu?restaurant_id=15267&source=collection&query=North%20Indian",
+      "text": "RESTAURANT_MENU",
+      "type": "DEEPLINK"
+    },
+    "relevance": {
+      "type": "RELEVANCE_TYPE_ON_MENU_RETURN",
+      "sectionId": "MENU_RETURN_FOOD"
+    }
+  };
+
+
+
 const Body=()=>{
     return (
         <div className="body">
