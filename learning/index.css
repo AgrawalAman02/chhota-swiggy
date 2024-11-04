@@ -40,9 +40,7 @@
     gap: 10px;
     overflow: 0 auto; 
 }
-search{
-    padding: 1000px;
-}
+
 
 .res-container{
     display: grid;
@@ -106,4 +104,13 @@ h5{
     gap: 5px;
     padding: 2px;
     align-items: end;
+}
+
+.filter-btn{
+    padding: 9px;
+    background-color: rgb(248, 146, 103);
+    border: none;
+    border-radius: 8px;
+    box-shadow: 1px 1px 5px rgb(226, 199, 137);
+    cursor: pointer;
 }
