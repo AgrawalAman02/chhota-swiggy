@@ -45,7 +45,8 @@ const Header  = ()=>{
 
 const RestaurantCards = (props)=>{
     const {resData} = props;
-    const {name,avgRating, costForTwo , sla,  cuisines} = resData.info.card.card;
+    const { info } = resData.card.card;
+    const { name, avgRating, costForTwo, sla, cuisines, cloudinaryImageId } = info;
     const {slaString }= sla;
     let displayedCuisines = '';
   
@@ -57,7 +58,7 @@ const RestaurantCards = (props)=>{
 
     return (
         <div className="res-cards">
-            <img src={"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/" +resData.info.cloudinaryImageId}
+            <img src={"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/" +cloudinaryImageId}
             alt="res-logo"
             className="res-logo" />
             <div className="res-card-bottom"> 
@@ -455,6 +456,131 @@ const resList = [
             },
             "cta": {
               "link": "swiggy://menu?restaurant_id=91293&source=collection&query=North%20Indian",
+              "text": "RESTAURANT_MENU",
+              "type": "DEEPLINK"
+            },
+            "widgetId": "collectionV5RestaurantListWidget_SimRestoRelevance_food"
+          },
+          "relevance": {
+            "type": "RELEVANCE_TYPE_ON_MENU_RETURN",
+            "sectionId": "MENU_RETURN_FOOD"
+          }
+        }
+    },
+
+    {
+        "card": {
+          "card": {
+            "@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
+            "info": {
+              "id": "697216",
+              "name": "Domino's Pizza",
+              "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2024/10/24/c6b56350-aca9-41ca-b0d1-8c94d68807d3_697216.JPG",
+              "locality": "Kasba",
+              "areaName": "B.B. Chatterjee Street",
+              "costForTwo": "₹400 for two",
+              "cuisines": [
+                "Pizzas",
+                "Italian",
+                "Pastas",
+                "Desserts"
+              ],
+              "avgRating": 4.5,
+              "parentId": "2456",
+              "avgRatingString": "4.5",
+              "totalRatingsString": "1.9K+",
+              "sla": {
+                "deliveryTime": 25,
+                "lastMileTravel": 0.8,
+                "serviceability": "SERVICEABLE",
+                "slaString": "20-25 mins",
+                "lastMileTravelString": "0.8 km",
+                "iconType": "ICON_TYPE_EMPTY"
+              },
+              "availability": {
+                "nextCloseTime": "2024-11-05 02:59:00",
+                "opened": true
+              },
+              "badges": {
+                "imageBadges": [
+                  {
+                    "imageId": "Rxawards/_CATEGORY-Pizza.png",
+                    "description": "Delivery!"
+                  }
+                ]
+              },
+              "isOpen": true,
+              "type": "F",
+              "badgesV2": {
+                "entityBadges": {
+                  "textBased": {
+                    
+                  },
+                  "imageBased": {
+                    "badgeObject": [
+                      {
+                        "attributes": {
+                          "imageId": "Rxawards/_CATEGORY-Pizza.png",
+                          "description": "Delivery!"
+                        }
+                      }
+                    ]
+                  },
+                  "textExtendedBadges": {
+                    
+                  }
+                }
+              },
+              "aggregatedDiscountInfoV3": {
+                "header": "₹125 OFF",
+                "subHeader": "ABOVE ₹1199",
+                "discountTag": "FLAT DEAL"
+              },
+              "orderabilityCommunication": {
+                "title": {
+                  
+                },
+                "subTitle": {
+                  
+                },
+                "message": {
+                  
+                },
+                "customIcon": {
+                  
+                }
+              },
+              "differentiatedUi": {
+                "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                "differentiatedUiMediaDetails": {
+                  "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+                  "lottie": {
+                    
+                  },
+                  "video": {
+                    
+                  }
+                }
+              },
+              "reviewsSummary": {
+                
+              },
+              "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+              "restaurantOfferPresentationInfo": {
+                
+              },
+              "externalRatings": {
+                "aggregatedRating": {
+                  "rating": "--"
+                }
+              },
+              "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
+            },
+            "analytics": {
+              
+            },
+            "cta": {
+              "link": "swiggy://menu?restaurant_id=697216&source=collection&query=Pizza",
               "text": "RESTAURANT_MENU",
               "type": "DEEPLINK"
             },
@@ -1574,130 +1700,7 @@ const resList = [
           }
         }
       },
-      {
-        "card": {
-          "card": {
-            "@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
-            "info": {
-              "id": "697216",
-              "name": "Domino's Pizza",
-              "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2024/10/24/c6b56350-aca9-41ca-b0d1-8c94d68807d3_697216.JPG",
-              "locality": "Kasba",
-              "areaName": "B.B. Chatterjee Street",
-              "costForTwo": "₹400 for two",
-              "cuisines": [
-                "Pizzas",
-                "Italian",
-                "Pastas",
-                "Desserts"
-              ],
-              "avgRating": 4.5,
-              "parentId": "2456",
-              "avgRatingString": "4.5",
-              "totalRatingsString": "1.9K+",
-              "sla": {
-                "deliveryTime": 25,
-                "lastMileTravel": 0.8,
-                "serviceability": "SERVICEABLE",
-                "slaString": "20-25 mins",
-                "lastMileTravelString": "0.8 km",
-                "iconType": "ICON_TYPE_EMPTY"
-              },
-              "availability": {
-                "nextCloseTime": "2024-11-05 02:59:00",
-                "opened": true
-              },
-              "badges": {
-                "imageBadges": [
-                  {
-                    "imageId": "Rxawards/_CATEGORY-Pizza.png",
-                    "description": "Delivery!"
-                  }
-                ]
-              },
-              "isOpen": true,
-              "type": "F",
-              "badgesV2": {
-                "entityBadges": {
-                  "textBased": {
-                    
-                  },
-                  "imageBased": {
-                    "badgeObject": [
-                      {
-                        "attributes": {
-                          "imageId": "Rxawards/_CATEGORY-Pizza.png",
-                          "description": "Delivery!"
-                        }
-                      }
-                    ]
-                  },
-                  "textExtendedBadges": {
-                    
-                  }
-                }
-              },
-              "aggregatedDiscountInfoV3": {
-                "header": "₹125 OFF",
-                "subHeader": "ABOVE ₹1199",
-                "discountTag": "FLAT DEAL"
-              },
-              "orderabilityCommunication": {
-                "title": {
-                  
-                },
-                "subTitle": {
-                  
-                },
-                "message": {
-                  
-                },
-                "customIcon": {
-                  
-                }
-              },
-              "differentiatedUi": {
-                "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-                "differentiatedUiMediaDetails": {
-                  "mediaType": "ADS_MEDIA_ENUM_IMAGE",
-                  "lottie": {
-                    
-                  },
-                  "video": {
-                    
-                  }
-                }
-              },
-              "reviewsSummary": {
-                
-              },
-              "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-              "restaurantOfferPresentationInfo": {
-                
-              },
-              "externalRatings": {
-                "aggregatedRating": {
-                  "rating": "--"
-                }
-              },
-              "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
-            },
-            "analytics": {
-              
-            },
-            "cta": {
-              "link": "swiggy://menu?restaurant_id=697216&source=collection&query=Pizza",
-              "text": "RESTAURANT_MENU",
-              "type": "DEEPLINK"
-            },
-            "widgetId": "collectionV5RestaurantListWidget_SimRestoRelevance_food"
-          },
-          "relevance": {
-            "type": "RELEVANCE_TYPE_ON_MENU_RETURN",
-            "sectionId": "MENU_RETURN_FOOD"
-          }
-        }
-      },
+      
 ]
 
 const Body=()=>{
@@ -1707,10 +1710,11 @@ const Body=()=>{
             <div className="res-container">
 
                 {
-                    resList.map((restaurant)=>{
-                        <RestaurantCards key = {restaurant.card.card.info.id} resData= {restaurant} />
-                    })
-
+                    resList.map((restaurant) => {
+                        return (
+                          <RestaurantCards key={restaurant.card.card.info.id} resData={restaurant} />
+                        );
+                      })
                 }
 
             </div>
