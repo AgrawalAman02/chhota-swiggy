@@ -54,7 +54,7 @@ search{
 
 .res-cards{
     width: 300px;
-    height: 270px;
+    height: 310px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -84,21 +84,26 @@ h5{
 }
 
 .res-card-bottom{
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 80px;
+    gap: 5px;
 }
 /* apply same for res-card-left and res-card-right in same block together*/
 .res-card-left{
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 5px;
     padding: 2px;
+    align-items: start;
 }   
 .res-card-right{
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 5px;
     padding: 2px;
+    align-items: end;
 }
