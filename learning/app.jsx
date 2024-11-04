@@ -43,30 +43,8 @@ const Header  = ()=>{
     );
 };
 
-const RestaurantCards = (props)=>{
-    return (
-        <div className="res-cards">
-            <img src="https://b.zmtcdn.com/data/pictures/1/20416271/ac8ab32b03b531b575dfe838604bfaa9_o2_featured_v2.jpg?output-format=webp" 
-            alt="res-logo"
-            className="res-logo" />
-            <div className="res-card-bottom"> 
-                <div className="res-card-left">
-                    <h3>{props.resName}</h3>
-                    <h5>{props.cuisine}</h5>
-                </div>
 
-                <div className="res-card-right">
-                    <h5>{props.rating}</h5>
-                    <h5>{props.time}</h5>
-                </div>
-            </div> 
-            
-            
-        </div>
-    )
-};
-
-const resData = {
+const resObj = {
     "@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
     "info": {
       "id": "15267",
@@ -169,16 +147,41 @@ const resData = {
 
 
 
+
+const RestaurantCards = (props)=>{
+    const {resData} = props;
+
+    return (
+        <div className="res-cards">
+            <img src="https://b.zmtcdn.com/data/pictures/1/20416271/ac8ab32b03b531b575dfe838604bfaa9_o2_featured_v2.jpg?output-format=webp" 
+            alt="res-logo"
+            className="res-logo" />
+            <div className="res-card-bottom"> 
+                <div className="res-card-left">
+                    <h3>{resData.info.name}</h3>
+                    <h5>{resData.info.cuisines.join(", ")}</h5>
+                </div>
+
+                <div className="res-card-right">
+                    <h5>{resData.info.avgRating}</h5>
+                    <h5>{resData.info.sla.slaString}</h5>
+                </div>
+            </div> 
+            
+            
+        </div>
+    )
+};
+
+
+
 const Body=()=>{
     return (
         <div className="body">
             <div  className ="search"> Search </div>
             <div className="res-container">
                 <RestaurantCards
-                resName= "Rang De Basanti"
-                cuisine ="North Indian , Kebab , Biryani"
-                rating ="4.1*"
-                time ="29 mins" />
+                resData = {resObj} />
 
                 <RestaurantCards 
                 resName= "KFC"
