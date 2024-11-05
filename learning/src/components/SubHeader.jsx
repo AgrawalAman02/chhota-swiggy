@@ -8,7 +8,7 @@ const SubHeader = ({ allRestaurants, setListOfRestaurants }) => {
 
     const handleFilter = () => {
         const filteredList = allRestaurants.filter(
-        (res) => res.card.card.info.avgRating > 4.5
+        (res) => res.card.card.info.avgRating >= 4.5
         );
         setListOfRestaurants(filteredList);
     };
