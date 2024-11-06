@@ -1,6 +1,7 @@
 import { useEffect , useState } from "react";
 import Shimmer from "./Shimmer";
 import { useParams } from "react-router-dom";
+import { MENU_API } from "../utils/constants";
 const RestaurantsMenu = ()=>{
 
     const [resInfo, setResInfo] = useState([]);
@@ -11,7 +12,7 @@ const RestaurantsMenu = ()=>{
     const {resId} = useParams();
     console.log(resId);
     const fetchData  = async ()=>{
-        const data  = await fetch(`https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=22.5929606&lng=88.3646054&restaurantId=${resId}&catalog_qa=undefined&query=Pasta&submitAction=ENTER`);
+        const data  = await fetch(MENU_API+resId);
         const json =await data.json();
         // console.log(json); 
         setResInfo(json?.data?.cards);
@@ -51,23 +52,38 @@ const RestaurantsMenu = ()=>{
            
             
             <h2>Menu</h2>
-            {/* <details>
-                <summary>{resTitle}</summary>
-                <div>1efjew</div>
-                <div>39093029</div>
-                <div><p>efjnwnje</p></div>
-                <div><p>kjefkwnfwn</p></div>
-            </details> */}
              {cardArray.map((cardItem) => {
-                const title = cardItem.card?.card?.title || "Menu";
-                const itemCards = cardItem.card?.card?.itemCards || [];
+                const title = cardItem?.card?.card?.title || `Menu`;
+                // const itemCards = cardItem?.card?.card?.itemCards || cardItem?.card?.card?.categories || [];
+                const cardData = cardItem?.card?.card || cardItem?.card?.card || [];
 
+                let items = [];
+
+                if(cardData?.itemCards){
+                    items = cardData.itemCards; 
+                }
+                else if(cardData?.categories){
+                    cardData.categories.forEach((category)=>{
+                        if(category.itemCards){
+                            items = items.concat(category.itemCards);
+                        }
+                    });
+                }
+
+                if (!items.length) {
+                    return null;
+                }
+
+                // const uKey = item.
                 return (
-                <details key={cardItem.card?.card?.id || title}>
+
+                <details key={cardData?.title || `section-${index}`}>
                     <summary>{title}</summary>
-                    {itemCards.map((itemCard) => (
-                    <div className="itemCard" key={itemCard.card?.info?.id || itemCard.card?.info?.name}>
-                        <p>{itemCard.card?.info?.name}</p>
+                    {/* {console.log(itemCards)} */}
+                    {items.map((itemCard) => (
+                    <div className="itemCard" key={itemCard?.card?.info?.id || itemCard?.card?.info?.name}>
+                        
+                        <p>{itemCard?.card?.info?.name}</p>
                     </div>
                     ))}
                 </details>
