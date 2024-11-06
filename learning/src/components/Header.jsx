@@ -10,18 +10,18 @@ const Header  = ()=>{
                 <img className="logo" src={LOGO_URL} />
             </div>
             <div className="nav-container">
-                <ul className="">
+                <ul >
                     <li>
-                        <Link to="/">Home</Link>
+                        <Link to="/" className="nav-list">Home</Link>
                     </li>
                     <li>
-                        <Link to="/about">About Us</Link>
+                        <Link to="/about" className="nav-list">About Us</Link>
                     </li>
                     <li>
-                        <Link to="/contact">Contact Us</Link>
+                        <Link to="/contact" className="nav-list">Contact Us</Link>
                     </li>
                     <li>
-                        <Link to="/cart">Cart</Link>
+                        <Link to="/cart" className="nav-list">Cart</Link>
                     </li>
                     <button 
                         className="login-btn"

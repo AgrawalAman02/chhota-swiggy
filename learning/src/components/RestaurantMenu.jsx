@@ -51,8 +51,8 @@ const RestaurantsMenu = ()=>{
             </div>
            
             
-            <h2>Menu</h2>
-             {cardArray.map((cardItem) => {
+            <h4 className="menu">Menu</h4>
+            {cardArray.map((cardItem) => {
                 const title = cardItem?.card?.card?.title || `Menu`;
                 // const itemCards = cardItem?.card?.card?.itemCards || cardItem?.card?.card?.categories || [];
                 const cardData = cardItem?.card?.card || cardItem?.card?.card || [];
@@ -73,17 +73,20 @@ const RestaurantsMenu = ()=>{
                 if (!items.length) {
                     return null;
                 }
-
                 // const uKey = item.
                 return (
 
                 <details key={cardData?.title || `section-${index}`}>
-                    <summary>{title}</summary>
+                    <summary><h3>{title}</h3></summary>
                     {/* {console.log(itemCards)} */}
                     {items.map((itemCard) => (
-                    <div className="itemCard" key={itemCard?.card?.info?.id || itemCard?.card?.info?.name}>
+                    <div className="dishCard" key={itemCard?.card?.info?.id || itemCard?.card?.info?.name}>
                         
-                        <p>{itemCard?.card?.info?.name}</p>
+                        <div className="dishCard-description">
+                            <h4 className="dishName">{itemCard?.card?.info?.name}</h4>
+                            <p>Rs. {itemCard?.card?.info?.price/100}</p>
+                            <p className="dish-Description">{itemCard?.card?.info?.description}</p>
+                        </div>
                     </div>
                     ))}
                 </details>
