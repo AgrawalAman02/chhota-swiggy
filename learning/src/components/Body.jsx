@@ -3,6 +3,7 @@ import RestaurantCards from "./RestaurantCards";
 import Shimmer from "./Shimmer";
 import SubHeader from "./SubHeader";
 import { S_API } from "../utils/constants";
+import { Link } from "react-router-dom";
 const Body=()=>{
     const [allRestaurants, setAllRestaurants] = useState([]);
     const [listOfRestaurants, setListOfRestaurants] = useState([]);
@@ -39,9 +40,18 @@ const Body=()=>{
 
                 {
                     listOfRestaurants.map((restaurant) => {
+                        const resId = restaurant?.card?.card?.info.id;
 
+                        const resRoute = `/restaurants/${resId}`;
                         return (
-                          <RestaurantCards key={restaurant?.card?.card?.info.id} resData={restaurant} />
+                            <Link 
+                                to={resRoute}
+                                className = "resCardLink"
+                                key={resId}
+                            >
+                                <RestaurantCards resData={restaurant} />
+                            </Link>
+                            
                         );
                     })
                     

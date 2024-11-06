@@ -33,10 +33,17 @@ const SubHeader = ({ allRestaurants, setListOfRestaurants }) => {
   return (
     <div className="subHeader">
       <div className="search">
-        <input type="text" name="searchInp" id="searchInp" value={searchTxt} onChange={(e)=>{
+        <input type="text" name="searchInp" id="searchInp" value={searchTxt}
+        onKeyDown={(e)=>{
+          if(e.key === "Enter"){
+              handleSearch(searchTxt);
+            }}}
+        
+        onChange={(e)=>{  
             setSearchTxt(e.target.value);  
             if(e.target.value ==="") setListOfRestaurants(allRestaurants);      
         }} />
+          
         <button className="search-btn" onClick={()=>{
             handleSearch(searchTxt);
         }}>Search</button>
