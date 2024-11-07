@@ -27,7 +27,9 @@ const AppLayout = ()=>{
     return (
         <div className = "app">
             <Header/>
-            <Outlet/>
+            <div className="pt-20">
+                <Outlet />
+            </div>
             {/* <Footer/> */}
         </div>
     );

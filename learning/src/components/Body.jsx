@@ -41,14 +41,14 @@ const Body=()=>{
         <Shimmer/> 
     ) :
     (
-        <div className="p-2.5 flex-col h-[70vh] gap-2.5">
+        <div className="p-6 flex-col justify-start   h-[70vh] gap-2.5">
             <SubHeader
                 allRestaurants = {allRestaurants}
                 setListOfRestaurants = {setListOfRestaurants}
                 
             />
 
-            <div className="flex flex-wrap place-items-center items-center justify-center gap-x-8 gap-y-11 "> {
+            <div className="grid grid-cols-[repeat(auto-fill,_minmax(330px,_1fr))] place-items-center gap-y-3 gap-x-3"> {
                     listOfRestaurants.map((restaurant) => {
                         const resId = restaurant?.card?.card?.info.id;
 
