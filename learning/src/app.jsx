@@ -9,11 +9,21 @@ import Error from "./components/Error";
 import RestaurantMenu from "./components/RestaurantMenu";
 import { Suspense } from "react";
 import Shimmer from "./components/Shimmer";
+import useOnlineStatus from "./utils/useOnlineStatus.jsx";
 // import Grocery from "./components/Grocery"; for making it a different bundler i commented it 
 
 const Grocery = lazy(()=>import("./components/Grocery"));
 
 const AppLayout = ()=>{
+    // checking online Status
+    const onlineStatus = useOnlineStatus();
+    if(!onlineStatus) return (
+        <div className="online-status">
+            <span ></span>
+            <h1>&#128532;Looks like You are offline!</h1>
+            <h2>Please check your Internet Connection </h2>
+        </div>
+    )
     return (
         <div className = "app">
             <Header/>

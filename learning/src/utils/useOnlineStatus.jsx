@@ -3,13 +3,21 @@ const useOnlineStatus = ()=>{
     const [onlineStatus , setOnlineStatus] = useState(true);
     // check if online or not 
     useEffect(()=>{
-        window.addEventListener("offline",()=>{
+        const handleOffline = ()=>{
             setOnlineStatus(false);
-        });
-
-        window.addEventListener("online",()=>{
+        }
+        const handleOnline = ()=>{
             setOnlineStatus(true);
-        });
+        }
+
+        window.addEventListener("offline",handleOffline);
+
+        window.addEventListener("online", handleOnline);
+
+        return () =>{
+            window.removeEventListener("offline", handleOffline);
+            window.removeEventListener("online", handleOnline);
+        }
     })
 
     return onlineStatus;
