@@ -1,27 +1,12 @@
-import { useEffect , useState } from "react";
 import Shimmer from "./Shimmer";
 import { useParams } from "react-router-dom";
-import { MENU_API } from "../utils/constants";
-const RestaurantsMenu = ()=>{
-
-    const [resInfo, setResInfo] = useState([]);
-    
-    useEffect(()=>{
-        fetchData();
-    },[]);
+import useRestaurantMenu from "../utils/useRestaurantMenu";
+const RestaurantsMenu = ()=>{  
     const {resId} = useParams();
-    console.log(resId);
-    const fetchData  = async ()=>{
-        const data  = await fetch(MENU_API+resId);
-        const json =await data.json();
-        // console.log(json); 
-        setResInfo(json?.data?.cards);
-    };
+    const resInfo = useRestaurantMenu(resId);
 
     if(resInfo.length===0) return <Shimmer/> ;
-
     const {
-        id,
         name,
         cloudinaryImageId , 
         costForTwoMessage, 
@@ -31,11 +16,9 @@ const RestaurantsMenu = ()=>{
         areaName,
         sla
     } = resInfo[2]?.card?.card?.info|| {};
-    
 
     const cardArray = resInfo[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards.slice(2);
     
-
     return (
         <div className="restaurant-menu">
             <h1>{name}</h1>
@@ -54,11 +37,9 @@ const RestaurantsMenu = ()=>{
             <h4 className="menu">Menu</h4>
             {cardArray.map((cardItem) => {
                 const title = cardItem?.card?.card?.title || `Menu`;
-                // const itemCards = cardItem?.card?.card?.itemCards || cardItem?.card?.card?.categories || [];
                 const cardData = cardItem?.card?.card || cardItem?.card?.card || [];
 
                 let items = [];
-
                 if(cardData?.itemCards){
                     items = cardData.itemCards; 
                 }
@@ -73,9 +54,8 @@ const RestaurantsMenu = ()=>{
                 if (!items.length) {
                     return null;
                 }
-                // const uKey = item.
-                return (
 
+                return (
                 <details key={cardData?.title || `section-${index}`}>
                     <summary><h3>{title}</h3></summary>
                     {/* {console.log(itemCards)} */}
@@ -93,7 +73,6 @@ const RestaurantsMenu = ()=>{
                 );
             })}
         </div>
-
     )
 }
 
