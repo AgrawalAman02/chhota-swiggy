@@ -41,14 +41,14 @@ const Body=()=>{
         <Shimmer/> 
     ) :
     (
-        <div className="body">
+        <div className="p-2.5 flex-col h-[70vh] gap-2.5">
             <SubHeader
                 allRestaurants = {allRestaurants}
                 setListOfRestaurants = {setListOfRestaurants}
                 
             />
 
-            <div className="res-container"> {
+            <div className="flex flex-wrap place-items-center items-center justify-center gap-x-8 gap-y-11 "> {
                     listOfRestaurants.map((restaurant) => {
                         const resId = restaurant?.card?.card?.info.id;
 
