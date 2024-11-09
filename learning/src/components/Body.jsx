@@ -30,7 +30,7 @@ const Body=()=>{
     const onlineStatus = useOnlineStatus();
     if(!onlineStatus) return (
         <div className="online-status">
-            <span ></span>
+            
             <h1>&#128532;Looks like You are offline!</h1>
             <h2>Please check your Internet Connection </h2>
         </div>

@@ -1,11 +1,12 @@
 // SubHeader.jsx
-import React from "react";
-import { useState } from "react";  
-import Shimmer from "./Shimmer";
+import React ,  {useContext} from "react";
+import { useContext, useState } from "react";  
+import UserContext from "../utils/UserContext";
 
 const SubHeader = ({ allRestaurants, setListOfRestaurants }) => {
 
     const [searchTxt , setSearchTxt] = useState("");
+    const {setUserName , loggedInUser} = useContext(UserContext);
 
     const handleFilter = () => {
         const filteredList = allRestaurants.filter(
@@ -54,6 +55,17 @@ const SubHeader = ({ allRestaurants, setListOfRestaurants }) => {
             handleSearch(searchTxt);
         }}>Search</button>
       </div>
+
+      <div>
+        <span>UserName : </span>
+        <input type="text" placeholder="Enter Your UserName" value={loggedInUser} 
+        className="border rounded-xl p-0.5 px-3 m-1 mr-4 border-black"
+        onChange={(e)=>{
+          setUserName(e.target.value);
+        }}
+        />
+      </div>
+
       <div className="filter flex justify-end p-0.5 pr-4 "> 
         <button className="p-2 bg-orange-300  border border-gray-400 rounded-2xl bg-white shadow-md hover:shadow-lg hover:scale-95 hover:transition-all" onClick={handleFilter}>
           Top Rated Restaurants
