@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import RestaurantCards from "./RestaurantCards";
+import RestaurantCards ,{withPromotedLabel} from "./RestaurantCards";
 import Shimmer from "./Shimmer";
 import SubHeader from "./SubHeader";
 import { S_API } from "../utils/constants";
@@ -36,6 +36,8 @@ const Body=()=>{
         </div>
     )
 
+    const PromotedCard = withPromotedLabel(RestaurantCards);
+
     // showing a shimmer ui while loading  -- conditional rendering
     return listOfRestaurants.length === 0 ? (
         <Shimmer/> 
@@ -59,7 +61,11 @@ const Body=()=>{
                                 className = "resCardLink"
                                 key={resId}
                             >
-                                <RestaurantCards resData={restaurant} />
+                                {restaurant?.card?.card?.info?.promoted  ? 
+                                <PromotedCard resData={restaurant}/> 
+                                : 
+                                <RestaurantCards resData={restaurant} />}
+                                
                             </Link>
                             
                         );

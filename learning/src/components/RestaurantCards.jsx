@@ -35,4 +35,17 @@ const RestaurantCards = (props)=>{
     )
 };
 
+
+// addding a label of promoted in the restaurant card using higher order component
+export const withPromotedLabel = (RestaurantCards)=>{
+    return (props)=>{
+        return (
+            <div>
+                <label htmlFor="res-card-promoted" className="absolute bg-green-600 text-white cursor-pointer rounded-lg rounded-bl-none p-0.5 -ml-2 -mt-2  hover:scale-105 transition-all ">Promoted</label>
+                <RestaurantCards id="res-card-promoted" {...props} />
+            </div>
+        );
+    }
+}
+
 export default RestaurantCards;

@@ -58,7 +58,7 @@ const SubHeader = ({ allRestaurants, setListOfRestaurants }) => {
         <button className="p-2 bg-orange-300  border border-gray-400 rounded-2xl bg-white shadow-md hover:shadow-lg hover:scale-95 hover:transition-all" onClick={handleFilter}>
           Top Rated Restaurants
         </button>
-        <button className="ml-2.5 p-2 bg-slate-100  border border-gray-400 rounded-2xl bg-white shadow-md hover:shadow-lg cursor-pointer bg-red-100  " onClick={handleClearFilter}>
+        <button className="ml-2.5 p-2 bg-slate-100  border border-gray-400 rounded-2xl bg-white shadow-md hover:shadow-lg cursor-pointer bg-red-100  hover:scale-95 hover:transition-all" onClick={handleClearFilter}>
           &#10060; Clear Filter
         </button>
       </div>
