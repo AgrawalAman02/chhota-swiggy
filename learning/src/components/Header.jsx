@@ -41,7 +41,7 @@ const Header  = ()=>{
                         Hii {loggedInUser}
                     </li>
                     <button 
-                        className="login-btn p-2 border rounded-2xl shadow-md hover:shadow-lg cursor-pointer w-20 hover:scale-95 hover:transition-all  border-gray-400"
+                        className="login-btn border rounded-2xl p-2 m-1 border-orange-500 bg-orange-500 text-white  shadow-md hover:shadow-lg cursor-pointer w-20 hover:scale-95 hover:transition-all "
                         onClick={()=>{
                             btnName==="LogIn" ? setBtnName("LogOut") : setBtnName("LogIn");
                         }}

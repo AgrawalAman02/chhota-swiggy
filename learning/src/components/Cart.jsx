@@ -17,7 +17,7 @@ const Cart = () => {
         <div className="flex justify-between m-2 p-4"> 
             <h2 className="text-center text-4xl font-bold font-serif ">Cart</h2>
 
-            <button className="border rounded-2xl p-2 m-1 border-orange-500 bg-orange-500 text-white " onClick={handleClrCart}>Clear Cart</button>
+            <button className="border rounded-2xl p-2 m-1 border-orange-500 bg-orange-500 text-white shadow-md hover:shadow-lg cursor-pointer  hover:scale-95 hover:transition-all" onClick={handleClrCart}>Clear Cart</button>
         </div>
 
         {itemCards.length === 0 && 
@@ -26,7 +26,7 @@ const Cart = () => {
                 <div>
                     <h1 className="text-lg font-bold text-[#02060CBF] font-sans">Good Food is Always Cooking... </h1>
                     <h2 className="text-base text-[#02060C99] font-normal font-sans my-2 mx-0"> Your cart is empty. Add Something from the menu </h2> 
-                    <Link to="/"><button className="border rounded-2xl p-2 m-1 border-orange-500 bg-orange-500 text-white ">Browse Restaurants</button></Link>
+                    <Link to="/"><button className="border rounded-2xl p-2 m-1 border-orange-500 bg-orange-500 text-white shadow-md hover:shadow-lg cursor-pointer  hover:scale-95 hover:transition-all">Browse Restaurants</button></Link>
                 </div>
                 <img src={emptyCartImage} alt="EmptyCart"  className=" h-64 w-96"/> 
             </div>}

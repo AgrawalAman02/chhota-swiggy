@@ -7,8 +7,11 @@ const SubHeader = ({ allRestaurants, setListOfRestaurants }) => {
 
     const [searchTxt , setSearchTxt] = useState("");
     const {setUserName , loggedInUser} = useContext(UserContext);
+    const [filterBtnName , setFilterBtnName] = useState("Top Rated Restaurants");
 
+   
     const handleFilter = () => {
+        setFilterBtnName("Clear Filter")
         const filteredList = allRestaurants.filter(
         (res) => res?.card?.card?.info?.avgRating >= 4.5
         );
@@ -18,9 +21,13 @@ const SubHeader = ({ allRestaurants, setListOfRestaurants }) => {
     };
 
     const handleClearFilter = () => {
+        setFilterBtnName("Top Rated Restaurants")
         setListOfRestaurants(allRestaurants);
     };
-
+    const handleFilterBtn = ()=>{
+        filterBtnName === "Top Rated Restaurants" ? handleFilter() : handleClearFilter();
+    }
+    
     const handleSearch = (txt)=>{
         const searchedList = allRestaurants.filter(
             (res)=> res.card.card.info.name.toLowerCase().includes(txt.toLowerCase())
@@ -51,7 +58,7 @@ const SubHeader = ({ allRestaurants, setListOfRestaurants }) => {
         }} />
           
         <button 
-          className="rounded-2xl border border-gray-400 p-1 px-4  m-1 bg-white shadow-md hover:shadow-lg hover:scale-95 hover:transition-all" onClick={()=>{
+          className="border rounded-2xl p-2 m-1 border-orange-500 bg-orange-500 text-white  shadow-md hover:shadow-lg hover:scale-95 hover:transition-all" onClick={()=>{
             handleSearch(searchTxt);
         }}>Search</button>
       </div>
@@ -67,12 +74,10 @@ const SubHeader = ({ allRestaurants, setListOfRestaurants }) => {
       </div>
 
       <div className="filter flex justify-end p-0.5 pr-4 "> 
-        <button className="p-2  border border-gray-400 rounded-2xl bg-white shadow-md hover:shadow-lg hover:scale-95 hover:transition-all" onClick={handleFilter}>
-          Top Rated Restaurants
+        <button className="border rounded-2xl p-2 m-1 border-orange-500 bg-orange-500 text-white  shadow-md hover:shadow-lg hover:scale-95 hover:transition-all" onClick={handleFilterBtn}>
+          {filterBtnName}
         </button>
-        <button className="ml-2.5 p-2   border border-gray-400 rounded-2xl  shadow-md hover:shadow-lg cursor-pointer bg-red-100  hover:scale-95 hover:transition-all" onClick={handleClearFilter}>
-          &#10060; Clear Filter
-        </button>
+        
       </div>
     </div>
   );
