@@ -21,7 +21,7 @@ const Cart = () => {
         </div>
 
         {itemCards.length === 0 && 
-            <div className="p-6 flex justify-between mt-8 items-center">
+            <div className="p-6 flex justify-around mt-8 items-center">
                 
                 <div>
                     <h1 className="text-lg font-bold text-[#02060CBF] font-sans">Good Food is Always Cooking... </h1>

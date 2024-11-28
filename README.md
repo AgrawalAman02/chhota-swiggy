@@ -25,3 +25,19 @@
 - Slice (cart)
 - Dispatch (Action)
 - Selector
+
+## Testing
+
+- Unit Testing
+- Integration Testing
+- End to End Testing (e2e) 
+
+### Setting the Testing in our app
+
+- Install the React Testing Library
+- Install the jest 
+- Install the babel dependencies 
+- created the babel.config.js
+- Configure the parcel config file to disable the default babel transpilation
+- Jest configuration  i.e. `npx jest --init`
+- Install jsdom library
