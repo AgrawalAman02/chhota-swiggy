@@ -16,13 +16,13 @@ const Body=()=>{
 
     const fetchData = async () => {
         try {
-        const data = await fetch(S_API);
-        const json = await data.json();
-        const restaurants = json?.data?.cards?.slice(2) || [];
-        setAllRestaurants(restaurants);
-        setListOfRestaurants(restaurants);
+            const data = await fetch(S_API);
+            const json = await data.json();
+            const restaurants = json?.data?.cards?.slice(2) || [];
+            setAllRestaurants(restaurants);
+            setListOfRestaurants(restaurants);
         } catch (error) {
-        console.error("Error fetching data:", error);
+            console.error("Error fetching data:", error);
         }
     };
         

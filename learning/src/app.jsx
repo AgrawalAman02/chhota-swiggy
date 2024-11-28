@@ -9,9 +9,13 @@ import Error from "./components/Error";
 import RestaurantMenu from "./components/RestaurantMenu";
 import { Suspense } from "react";
 import Shimmer from "./components/Shimmer";
+import Cart from "./components/Cart.jsx";
 import useOnlineStatus from "./utils/useOnlineStatus.jsx";
 import UserContext from "./utils/UserContext.jsx";
 // import Grocery from "./components/Grocery"; for making it a different bundler i commented it 
+import { Provider } from "react-redux";
+import appStore from "./utils/appStore.jsx";
+
 
 const Grocery = lazy(()=>import("./components/Grocery"));
 
@@ -29,24 +33,26 @@ const AppLayout = ()=>{
     
 
     return (
-        <UserContext.Provider value={{loggedInUser : userName , setUserName}}>  {/* setUserName for input box in subheading */}
+        <Provider store={appStore}>   {/* using provider to use appstore for whole app.js . if we want to use it for particular comp then we can wrap the provider there  */}
+            <UserContext.Provider value={{loggedInUser : userName , setUserName}}>  {/* setUserName for input box in subheading */}
                 <div className = "app">
-                <Header/>
-                <div className="pt-20">
-                    {
-                        (!onlineStatus) ? (
-                            <div className="online-status">
-                                <h1>&#128532;Looks like You are offline!</h1>
-                                <h2>Please check your Internet Connection </h2>
-                            </div>
-                        ) :
-                        <Outlet />
-                    }
-                    
+                    <Header/>
+                    <div className="pt-20">
+                        {
+                            (!onlineStatus) ? (
+                                <div className="online-status">
+                                    <h1>&#128532;Looks like You are offline!</h1>
+                                    <h2>Please check your Internet Connection </h2>
+                                </div>
+                            ) :
+                            <Outlet />
+                        }
+                        
+                    </div>
+                    {/* <Footer/> */}
                 </div>
-                {/* <Footer/> */}
-            </div>
-        </UserContext.Provider>
+            </UserContext.Provider> 
+        </Provider>
     );
 };
 
@@ -79,7 +85,11 @@ const appRouter= createBrowserRouter([
             {
                 path : "restaurants/:resId",
                 element: <RestaurantMenu/>
-            }
+            },
+            {
+                path : "cart",
+                element : <Cart />
+            },
         ]),
         errorElement: <Error />,
     },
