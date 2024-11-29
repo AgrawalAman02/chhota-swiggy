@@ -1,9 +1,18 @@
-{
+
+  {
     "version": 2,
     "builds": [
-      { "src": "api/cors.js", "use": "@vercel/node" }
+      {
+        "src": "learning/index.html",
+        "use": "@vercel/static-build",
+        "config": { "distDir": "dist" }
+      }
     ],
     "routes": [
-      { "src": "/(.*)", "dest": "/api/cors.js" }
+      {
+        "src": "/(.*)",
+        "dest": "/learning/index.html"
+      }
     ]
   }
+  

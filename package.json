@@ -4,7 +4,8 @@
   "description": "Here I am learning about react",
   "scripts": {
     "start": "parcel learning/index.html",
-    "test": "jest"
+    "test": "jest",
+    "build": "parcel build learning/index.html"
   },
   "keywords": [
     "react"
