@@ -1,6 +1,6 @@
 # React Learning Journey
 
-![Project Logo](./images/logo.png)
+![Project Logo](./learning/src/components/images/logo.png)
 
 ## Table of Contents
 
@@ -9,13 +9,11 @@
 - [Features](#features)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Project Structure](#project-structure)
 - [Navigation](#navigation)
 - [Testing](#testing)
 - [Deployment](#deployment)
 - [Contributing](#contributing)
-- [License](#license)
-- [Contact](#contact)
+
 
 ## Description
 
@@ -62,3 +60,64 @@ Welcome to my React Learning Journey repository! This project showcases my progr
 2. **Install Dependencies:**
     ```bash
     npm install
+
+## Usage
+
+1. **Start the Development Server:**
+    ```bash
+        npm start
+
+    This will start the development server at http://localhost:1234
+
+2. **Run Tests:**
+    ```bash
+        npm start
+
+3. **Build for Production:**
+    ```bash
+        npm run build
+
+## Navigation
+
+The application consists of the following main sections:
+
+-**Home:** Displays a list of restaurants with options to search and filter.
+- **About Us:** Information about the creator or the project.
+- **Contact Us:** Contact form or information.
+- **Cart:** View and manage items added to the cart.
+- **Grocery (Lazy Loaded):** Separate section for grocery items, loaded on demand for   performance optimization.
+
+## Testing
+This project includes comprehensive testing using Jest and React Testing Library.
+
+- **Unit Testing:** Testing individual components and functions.
+- **Integration Testing:** Testing the integration between components.
+- **End-to-End Testing (e2e):** Ensuring the application works as expected from the user's perspective.
+
+### Setting Up Tests
+Ensure all dev dependencies are installed:
+    ```bash
+    npm install
+Run tests using:
+    ```bash
+    npm test
+Test coverage reports can be generated and viewed in the coverage directory.
+
+## Contributing
+Contributions are welcome! Please follow these steps:
+
+1. **Fork the Repository.**
+
+2. **Create a New Branch:**
+    ```bash
+    git checkout -b feature/YourFeature
+3.**Commit Your Changes:**
+    ```bash
+    git commit -m "Add some feature"
+
+4. **Push to the Branch:**
+    ```bash
+    git push origin feature/YourFeature
+
+5. **Open a Pull Request.**
+Please ensure your code follows the project's coding standards and passes all tests.
