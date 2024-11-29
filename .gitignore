@@ -9,6 +9,7 @@ coverage
 __tests__
 __mocks__
 
-
+babel.config.js
+jest.config.js
 sum.js
 cors-anywhere
