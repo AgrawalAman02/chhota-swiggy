@@ -4,3 +4,11 @@ package-lock.json
 /.parcel-cache
 /theory.js
 /data.json
+
+coverage 
+__tests__
+__mocks__
+
+
+sum.js
+cors-anywhere

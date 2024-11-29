@@ -1,0 +1,82 @@
+{
+    "card": {
+        "card": {
+            "@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
+            "info": {
+                "id": "12458",
+                "name": "One Step Up",
+                "cloudinaryImageId": "coi1ojwiebapeeyw2dob",
+                "locality": "Park Street",
+                "areaName": "Park Street",
+                "costForTwo": "₹800 for two",
+                "cuisines": [
+                    "Continental"
+                ],
+                "avgRating": 4.7,
+                "parentId": "152264",
+                "avgRatingString": "4.7",
+                "totalRatingsString": "8.3K+",
+                "promoted": true,
+                "adTrackingId": "cid=21888083~p=0~adgrpid=21888083#ag1~mp=SWIGGY_IN~bl=FOOD~aet=RESTAURANT~aeid=12458~eid=6164d096-b094-47c7-b6fa-02ff25b2d10c~srvts=1732882314496~collid=80479",
+                "sla": {
+                    "deliveryTime": 60,
+                    "lastMileTravel": 5,
+                    "serviceability": "SERVICEABLE",
+                    "slaString": "55-60 mins",
+                    "lastMileTravelString": "5.0 km",
+                    "iconType": "ICON_TYPE_EMPTY"
+                },
+                "availability": {
+                    "nextCloseTime": "2024-11-29 22:45:00",
+                    "opened": true
+                },
+                "badges": {},
+                "isOpen": true,
+                "aggregatedDiscountInfoV2": {},
+                "type": "F",
+                "badgesV2": {
+                    "entityBadges": {
+                        "textBased": {},
+                        "imageBased": {},
+                        "textExtendedBadges": {}
+                    }
+                },
+                "orderabilityCommunication": {
+                    "title": {},
+                    "subTitle": {},
+                    "message": {},
+                    "customIcon": {},
+                    "commsStyling": {}
+                },
+                "differentiatedUi": {
+                    "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                    "differentiatedUiMediaDetails": {
+                        "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+                        "lottie": {},
+                        "video": {}
+                    }
+                },
+                "reviewsSummary": {},
+                "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+                "restaurantOfferPresentationInfo": {},
+                "externalRatings": {
+                    "aggregatedRating": {
+                        "rating": "4.3",
+                        "ratingCount": "2.1K+"
+                    },
+                    "source": "GOOGLE",
+                    "sourceIconImageId": "v1704440323/google_ratings/rating_google_tag"
+                },
+                "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
+                "campaignId": "21888083"
+            },
+            "analytics": {},
+            "cta": {
+                "link": "swiggy://menu?restaurant_id=12458&source=collection&query=Pasta",
+                "text": "RESTAURANT_MENU",
+                "type": "DEEPLINK"
+            },
+            "widgetId": "collectionV5RestaurantListWidget"
+        }
+    }
+}
