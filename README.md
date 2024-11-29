@@ -1,46 +1,64 @@
-# React
+# React Learning Journey
 
-- This repo consist of my whole journey of learning of react
+![Project Logo](./images/logo.png)
 
-## Parcel
+## Table of Contents
 
-- Dev Build
-- Local Server
-- HMR = Hot Module Replacement
-- File watching algorithm - to keep an eye on all files - build in cpp
-- Caching = Faster Build
-- Image Optimisation
-- Minification
-- Bundling
-- Compress
-- Code splitting 
-- differential bundling - support older browser
-- Tree Shaking - remove unused code
+- [Description](#description)
+- [Tech Stack](#tech-stack)
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Project Structure](#project-structure)
+- [Navigation](#navigation)
+- [Testing](#testing)
+- [Deployment](#deployment)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
 
-## Redux
+## Description
 
-- Install @reduxjs/toolkit and react-redux
-- Build our store 
-- Connect our store to our app 
-- Slice (cart)
-- Dispatch (Action)
-- Selector
+Welcome to my React Learning Journey repository! This project showcases my progress and learning experiences while mastering React, Redux, Parcel bundler, Tailwind CSS, and testing frameworks like Jest. It includes various components, state management with Redux, and robust testing to ensure code quality. The application is deployed on Vercel, demonstrating seamless deployment practices.
 
-## Testing
+## Tech Stack
 
-- Unit Testing
-- Integration Testing
-- End to End Testing (e2e) 
+- **Frontend:**
+  - React
+  - React Router DOM
+  - Redux & @reduxjs/toolkit
+  - Tailwind CSS
+  - Parcel Bundler
 
-### Setting the Testing in our app
+- **Testing:**
+  - Jest
+  - React Testing Library
+  - Babel
 
-- Install the React Testing Library
-- Install the jest 
-- Install the babel dependencies 
-- created the babel.config.js
-- Configure the parcel config file to disable the default babel transpilation
-- Jest configuration  i.e. `npx jest --init`
-- Install jsdom library
-- Install @babel/preset-react - to make JSX work in test cases
-- Include @babel/preset-react in my babel config
-- Include testing-library/jest-dom';
+- **Deployment:**
+  - Vercel
+
+- **Others:**
+  - CORS Anywhere
+
+## Features
+
+- **Responsive Design:** Built with Tailwind CSS for a responsive and modern UI.
+- **State Management:** Utilizes Redux for efficient state management across components.
+- **Routing:** Implemented with React Router DOM for seamless navigation.
+- **Lazy Loading:** Optimized performance with lazy loading of components.
+- **Testing:** Comprehensive unit, integration, and end-to-end testing using Jest and React Testing Library.
+- **Deployment:** Easily deployable to Vercel for live access.
+- **CORS Handling:** Integrated `cors-anywhere` for handling CORS issues during development.
+
+## Installation
+
+1. **Clone the Repository:**
+
+   ```bash
+   git clone https://github.com/yourusername/hello-react.git
+   cd hello-react
+
+2. **Install Dependencies:**
+    ```bash
+    npm install
