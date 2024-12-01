@@ -16,7 +16,11 @@ const Body=()=>{
 
     const fetchData = async () => {
         try {
-            const data = await fetch(S_API);
+            const data = await fetch(S_API,{
+                headers :{
+                    'x-cors-api-key' : 'temp_b432e363c3d0cdf878dacf15b4828767',
+                }
+            });
             const json = await data.json();
             const restaurants = json?.data?.cards?.slice(2) || [];
             setAllRestaurants(restaurants);
