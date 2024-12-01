@@ -1,6 +1,5 @@
 // SubHeader.jsx
-import React ,  {useContext} from "react";
-import { useContext, useState } from "react";  
+import React ,  {useContext , useState } from "react";
 import UserContext from "../utils/UserContext";
 
 const SubHeader = ({ allRestaurants, setListOfRestaurants }) => {
@@ -13,7 +12,7 @@ const SubHeader = ({ allRestaurants, setListOfRestaurants }) => {
     const handleFilter = () => {
         setFilterBtnName("Clear Filter")
         const filteredList = allRestaurants.filter(
-        (res) => res?.card?.card?.info?.avgRating >= 4.5
+        (res) => res?.card?.card?.info?.avgRating > 4.3
         );
         if(filteredList.length!=0) 
         setListOfRestaurants(filteredList);

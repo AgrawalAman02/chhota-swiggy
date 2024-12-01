@@ -6,6 +6,7 @@ import { addItems } from "../utils/cartSlice";
 import { CDN_URL } from "../utils/constants";
 const RestaurantsMenu = ()=>{  
     const {resId} = useParams();
+    const dispatch = useDispatch();
     const resInfo = useRestaurantMenu(resId);
 
     if(resInfo.length===0) return <Shimmer/> ;
@@ -61,7 +62,6 @@ const RestaurantsMenu = ()=>{
                 const categoryLength= items.length;
 
 
-                const dispatch = useDispatch();
                 const handleAddBtn = (itemCard)=>{
                     dispatch(addItems(itemCard));
                     console.log(itemCard);
