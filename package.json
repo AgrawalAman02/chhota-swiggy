@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "Here I am learning about react",
   "scripts": {
-    "start": "parcel learning/index.html",
+    "start": "parcel index.html",
     "test": "jest",
-    "build": "parcel build learning/index.html"
+    "build": "parcel build index.html"
   },
   "keywords": [
     "react"
