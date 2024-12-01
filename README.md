@@ -1,6 +1,6 @@
 # React Learning Journey
 
-![Project Logo](./learning/src/components/images/logo.png)
+![Project Logo](./src/components/images/logo.png)
 
 ## Table of Contents
 
